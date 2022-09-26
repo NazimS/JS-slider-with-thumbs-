@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Slider with thumbs</title>
+        <style>
+            body { margin: 0; background: #EEE;}
+            #slider {
+                position: relative;
+                margin: 10vh auto;
+                width: 80%;
+                height: 70vh;
+                background: #fff;
+                box-shadow: 0 0 10px #333;
+            }
+            #slider > * { position: absolute }
+            #prev, #next { top: 50%; cursor: pointer; width: 30px; height: 30px; font-size: 1.1rem; }
+            #next, #count { right: 0 }
+            #count { background: #ffffffcc; padding: 5px 10px }
+            #thumbs { bottom: 0; text-align: center; width: 100%}
+            #thumbs > img { width: 30px; height: 30px; border-radius: 50%; margin: 5px; border: 2px solid #fff; cursor: pointer;}
+        </style>
+    </head>
+    <body>
+        <div id="slider">
+            <div id="count"></div>
+            <button id="prev" onclick="change(-1)">⏴</button>
+            <button id="next" onclick="change(1)">⏵</button>
+            <div id="thumbs"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
